@@ -39,7 +39,6 @@ public class SegmentTree {
 	}
 	public void update(int i, long x){
 		i += n-1;
-		dat[i] = x;
 		dat[i] = fa(dat[i], x);
 		while(i > 0){
 			i = (i-1) / 2;
