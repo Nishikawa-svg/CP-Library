@@ -257,6 +257,7 @@ public class NumberTheory {
 	 * O(log(N))
 	 */
 	public static long modPow(long p, long n, long mod){
+		p %= mod;
 		long ret = 1;
 		while(n > 0){
 			if((n & 1) == 1) ret = ret * p % mod;

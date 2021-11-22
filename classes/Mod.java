@@ -12,6 +12,7 @@ public class Mod {
 		return MOD;
 	}
 	static long pow(long p, long n){
+		p %= MOD;
 		long ret = 1;
 		while(n > 0){
 			if((n & 1) == 1) ret = ret * p % MOD;
