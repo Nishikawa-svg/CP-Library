@@ -60,10 +60,10 @@ public class LazySegmentTree {
 			_evalAll(k*2+2, (l+r)/2, r);
 		}
 	}
-	public void update(int a, int b, int x){
+	public void update(int a, int b, long x){
 		_update(a,b,x,0,0,n);
 	}
-	private void _update(int a, int b, int x, int k, int l, int r){
+	private void _update(int a, int b, long x, int k, int l, int r){
 		eval(k,l,r);
 		if(a <= l && r <= b){
 			lazy[k] = fm(lazy[k], x);
