@@ -12,7 +12,7 @@ public class TSP {
 		dp[0][start] = 0;
 		for(int s = 0; s < 1<<n; s++){
 			for(int i = 0; i < n; i++){
-				if(s != 0 && (s & 1<<n) == 0) continue;
+				if(s != 0 && (s & 1<<i) == 0) continue;
 				for(int j = 0; j < n; j++){
 					if((s & 1<<j) != 0) continue;
 					dp[s|1<<j][j] = Math.min(dp[s|1<<j][j], dp[s][i] + dist[i][j]);
@@ -28,7 +28,7 @@ public class TSP {
 		dp[0][start] = 0;
 		for(int s = 0; s < 1<<n; s++){
 			for(int i = 0; i < n; i++){
-				if(s != 0 && (s & 1<<n) == 0) continue;
+				if(s != 0 && (s & 1<<i) == 0) continue;
 				for(int j = 0; j < n; j++){
 					if((s & 1<<j) != 0) continue;
 					dp[s|1<<j][j] = Math.min(dp[s|1<<j][j], dp[s][i] + dist[i][j]);
